@@ -12,50 +12,8 @@ const PostList = props => {
   const handleClickAdd = () => {
     setAddMode(!addMode);
   };
-  //POST AXIOS CALL
-  useEffect(() => {
-    axiosAuth()
-      .get(`/posts`)
-      .then(res => {
-        // console.log(res.data)
-        setPost(res.data);
-        setLoading(false);
-      })
-      .catch(err => {
-        console.error(err);
-      });
-  }, []);
 
-  //USERS AXIOS CALL
-  useEffect(() => {
-    axiosAuth()
-      .get(`/users`)
-      .then(res => {
-        // console.log(res.data)
-        setUser(res.data);
-        setLoading(false);
-      })
-      .catch(err => {
-        console.error(err);
-      });
-  }, []);
 
-  const userID = [];
-  user.map(users => {
-    // console.log(users.id)
-    userID.push(users.id);
-  });
-  const postID = [];
-  post.map(posts => {
-    // console.log(posts.id)
-    postID.push(posts.user_id);
-  });
-
-  console.log(userID);
-  console.log(postID);
-
-  console.log(user);
-  console.log(post);
 
   useEffect(() => {
     axiosAuth()
