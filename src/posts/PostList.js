@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PostCard from "./PostCard";
 import PostAdd from "./PostAdd";
-import axiosAuth from "../axiosAuth";
+import axiosAuth from "../utils/axiosAuth";
 
 const PostList = props => {
   const [post, setPost] = useState([]);
