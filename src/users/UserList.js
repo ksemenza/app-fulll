@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import UserCard from "./UserCard";
 import UserAdd from "./UserAdd";
-import axiosAuth from "../axiosAuth";
+import axiosAuth from "../utils/axiosAuth";
 
 const UserList = props => {
 

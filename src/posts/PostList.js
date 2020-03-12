@@ -129,7 +129,6 @@ const PostList = props => {
                 <PostCard
                   key={post.id}
                   text={post.text}
-                  user_id={post.user_id}
                   post={post}
                   deletePost={deletePost}
                   editPost={editPost}

@@ -18,7 +18,7 @@ const PostAdd = props => {
 
       <form className="form-add" onSubmit={handleSubmit}>
         <label htmlFor="text">Entry</label>
-        <input
+        <textarea
           required
           type="text"
           name="text"
