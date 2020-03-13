@@ -33,6 +33,7 @@ const PostCard = ({ post, deletePost, editPost }) => {
 
       <div>
         <h4>{post.text}</h4>
+        {/* <p>{post.id}</p> */}
 
         <button className="edit" onClick={handleEditClick}>
           Edit

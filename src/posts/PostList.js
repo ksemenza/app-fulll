@@ -20,11 +20,14 @@ const PostList = props => {
       .get(`/posts`)
       .then(res => {
         console.log(res.data);
+        setPost(res.data)
       })
       .catch(err => {
         console.error(err);
       });
   }, []);
+
+
 
   const addPost = newPost => {
     setLoading(true);
@@ -87,6 +90,7 @@ const PostList = props => {
                 <PostCard
                   key={post.id}
                   text={post.text}
+                  text={post.user_id}
                   post={post}
                   deletePost={deletePost}
                   editPost={editPost}
